@@ -1,4 +1,6 @@
 let button = document.getElementById("adder");
+let value = document.getElementById("value");
+
 
 let num = 0;
 
@@ -6,18 +8,22 @@ function addOne(){
     num +=1;
 }
 
+function updateValue(i){
+    value.textContent = i;
+}
+
 function next(){
     addOne();
     if(num % 15 == 0){
-        console.log("FizzBuzz");
+        updateValue("FizzBuzz");
     }
     else if (num % 3 == 0){
-        console.log("Fizz");
+        updateValue("Fizz");
     }
     else if (num % 5 == 0){
-        console.log("Buzz");
+        updateValue("Buzz");
     }
     else{
-        console.log(num);
+        updateValue(num);
     }
 }
