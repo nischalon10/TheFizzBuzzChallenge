@@ -1,4 +1,3 @@
-let button = document.getElementById("adder");
 let value = document.getElementById("value");
 
 
@@ -12,8 +11,7 @@ function updateValue(i){
     value.textContent = i;
 }
 
-function next(){
-    addOne();
+function fb(num){
     if(num % 15 == 0){
         updateValue("FizzBuzz");
     }
@@ -27,3 +25,9 @@ function next(){
         updateValue(num);
     }
 }
+
+function next(){
+    addOne();
+    fb(num);
+}
+nfkv
