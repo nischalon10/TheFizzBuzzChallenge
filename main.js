@@ -2,7 +2,7 @@
 const baseUrl = "http://basic-web.dev.avc.web.usf.edu/";
 
 // Session Variables
-let username = sessionStorage.getItem("username");
+let username = window.prompt("Username");
 let url = baseUrl + username;
 let num;
 // HTML Elements
