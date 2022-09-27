@@ -5,9 +5,7 @@ form.addEventListener('submit',handleForm);
 let username="";
 
 function login(){
-  while(username==""){
-    username = document.getElementById("username").value.trim();
-  }
+  username = document.getElementById("username").value.trim();
   sessionStorage.setItem("username",username);
   window.location.assign("./app/app.html");
 }

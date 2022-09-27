@@ -9,23 +9,23 @@ let num;
 let value = document.getElementById("value");
 document.getElementById("userID").innerText = username;
 
-
-get(url).then(function(response){
-    console.log(response);
-    if (response.status != 200){
-        post(url,{score:0}).then(function(response){
-            console.log(response);
-            num = 0;
-        });
-    }
+get(url).then(function (response) {
+  console.log(response);
+  if (response.status != 200) {
+    post(url, { score: 0 }).then(function (response) {
+      console.log(response);
+      num = 0;
+    });
+  } else {
     num = response.data.score;
-    updateValue(num);
+  }
+  updateValue(num);
 });
 
 function next() {
   num += 1;
   fb(num);
-  post(url,{score: num});
+  post(url, { score: num });
 }
 
 function updateValue(i) {

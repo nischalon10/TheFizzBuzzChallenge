@@ -1,11 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+:root{
+    --white: #e0e0e0;
+    --dark : #bebebe;
+    --light: #ffffff;
+    font-family: 'Ubuntu';
+    font-size: xx-large;
+}
 
 body{
+    background-color: var(--white);
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    font-family: 'Noto Serif', serif;
 }
 
 h1{
@@ -20,6 +27,20 @@ p{
 
 button{
     font-weight: bold;
+    margin: 1em;
+    padding: 1em;
+    font-size: xx-large;
+    font-family: 'Ubuntu';
+    border: none;
+    border-radius: .5em;
+    background-color: var(--white);
+    box-shadow:  .3em .3em .7em var(--dark),
+                 -.3em -.3em .7em var(--light);
+}
+
+button:hover{
+    box-shadow:  .15em .15em .5em var(--dark),
+                 -.15em -.15em .5em var(--light);
 }
 
 #flex{
@@ -28,10 +49,15 @@ button{
 }
 
 #value{
-    background-color: #cbcbcb;
-    padding: 0.5em;
-    border-radius: 10%;
-    color: #e80000;
+    padding: .5em;
+    border: none;
+    border-radius: .3em;
+    background-color: var(--white);
+    font-family: 'Ubuntu';
+    font-size: xx-large;
+    box-shadow: inset .1em .1em .3em var(--dark),
+                inset -.1em -.1em .3em var(--light);
+    width: max-content;
+    color: navy;
     font-weight: bold;
-    font-family: monospace;
 }
